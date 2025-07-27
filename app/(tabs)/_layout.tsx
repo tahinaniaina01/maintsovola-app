@@ -2,6 +2,7 @@ import { Link, Tabs } from 'expo-router';
 
 import { HeaderButton } from '../../components/HeaderButton';
 import { TabBarIcon } from '../../components/TabBarIcon';
+import {MapPin } from 'lucide-react-native'
 
 export default function TabLayout() {
   return (
@@ -26,6 +27,13 @@ export default function TabLayout() {
         options={{
           title: 'Tab Two',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="terrain"
+        options={{
+          title: 'Terrain',
+          tabBarIcon: ({ color }) => <MapPin />,
         }}
       />
     </Tabs>
